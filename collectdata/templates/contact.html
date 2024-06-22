@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Contact
+        </title>
+        <link rel="stylesheet" href="/static/contact.css">
+        
+    </head>
+    <body class="img">
+
+        
+       
+            <br><br><br><br><br><br><br><br>
+            <font fontface="Verdana" size="10" color="black" style="float: right; padding-right: 100px;">IPCS Global</font><br><br><br><br>
+        <div class="main" style="padding-top: 10px;">
+            <form action="{% url 'Savedata' %}" method="POST" class="form">
+                <fieldset><legend>Student Information</legend>
+                    {% csrf_token %}
+             Name:<input type="text" name="NAME" list="suggestion" ><br><br>
+            EMAIL:<input type="email" name="EMAIL" list="suggestion"><br><br>
+            Mobile:<input type="text" name="MobileNo" list="suggestion" ><br><br>
+            Address:<input type="text" name="ADDRESS" list="suggestion" ><br><br>
+
+
+            <!-- Course:<select>
+                <option>select course</option>
+                <option>Python Developer</option>
+                <option>Data Science</option>
+                <option>Machine Learing</option>
+
+            </select><br><br>
+            Nearest Location:<select>
+                <option>Select Location</option>    
+
+               <option>Kerla</option>    
+            <option>Mumbai</option>
+            <option>Nagpur</option>
+            </select> -->
+            <button type="submit" >Send</button> <br>
+            <!-- output:
+            <input type="text" autofocus=""/> -->
+        </div>
+    </fieldset> 
+</form>
+    
+    </body>
+</html>
